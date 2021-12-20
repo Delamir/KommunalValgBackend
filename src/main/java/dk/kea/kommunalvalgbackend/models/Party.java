@@ -17,5 +17,5 @@ public class Party {
     private String party;
 
     @Column
-    private int votes;
+    private String votes;
 }
