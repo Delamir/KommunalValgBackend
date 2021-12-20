@@ -24,7 +24,7 @@ public class CandidateController {
         return candidateRepository.save(candidate);
     }
 
-    @PatchMapping("/candidates/{id}")
+    @PutMapping("/candidates/{id}")
     public String updateCandidate(@PathVariable Long id, @RequestBody Candidate candidate) {
         try {
             candidateRepository.findById(id).map(foundCandidate -> {

@@ -20,6 +20,11 @@ public class PartyController {
     @Autowired
     CandidateRepository candidateRepository;
 
+    @GetMapping("/parties")
+    public List<Party> getParties() {
+        return partyRepository.findAll();
+    }
+
     @GetMapping("/parties/candidates/{partyid}")
     public List<Candidate> getCandidatesInSpecificParty(@PathVariable Long partyid) {
         Party party = partyRepository.findById(partyid).get();
