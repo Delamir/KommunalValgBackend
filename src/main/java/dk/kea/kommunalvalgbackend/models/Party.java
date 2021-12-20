@@ -15,4 +15,7 @@ public class Party {
 
     @Column
     private String party;
+
+    @Column
+    private int votes;
 }
